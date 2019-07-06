@@ -13,15 +13,12 @@ const shape = {
 const size = {
   small: {
     fontSize: 14,
-    height: 30,
   },
   medium: {
     fontSize: 18,
-    height: 54,
   },
   large: {
     fontSize: 22,
-    height: 60,
   },
 };
 
@@ -96,7 +93,7 @@ const template = (props) => {
 
 const Icon = styled.i(
   {
-    display: 'flex',
+    display: 'inline-flex',
   },
   props => ({
     fontSize: props.iconSize,
@@ -110,7 +107,7 @@ const ButtonBox = styled.button(
     fontFamily: 'Poppins, sans-serif',
     margin: '0 10px',
     cursor: 'pointer',
-    display: 'flex',
+    display: 'inline-flex',
     alignItems: 'center',
     transition: '0.25s cubic-bezier(0.17, 0.67, 0.52, 0.97)',
     padding: '0 22px',

@@ -8,6 +8,7 @@ const Text = (props) => {
       fontSize: 20,
       color: '#36424A',
       fontWeight: 900,
+      '& strong': { color: props.accentColor },
       '@media(min-width: 768px)': {
         fontSize: 24,
       },
@@ -36,6 +37,7 @@ const Text = (props) => {
       fontSize: 16,
       color: '#36424A',
       fontWeight: 900,
+      '& strong': { color: props.accentColor },
       '@media(min-width: 768px)': {
         fontSize: 18,
       },
@@ -92,6 +94,7 @@ const Text = (props) => {
       fontSize: 14,
       color: '#36424A',
       fontWeight: 900,
+      '& strong': { color: props.accentColor },
       '@media(min-width: 768px)': {
         fontSize: 14,
       },
@@ -134,6 +137,7 @@ const Text = (props) => {
       fontSize: 10,
       color: '#6E7A83',
       fontWeight: 400,
+      '& strong': { color: props.accentColor },
       '@media(min-width: 768px)': {
         fontSize: 12,
       },
@@ -162,6 +166,7 @@ const Text = (props) => {
       fontSize: 11,
       fontWeight: 900,
       textTransform: 'uppercase',
+      '& strong': { color: props.accentColor },
       '@media(min-width: 768px)': {
         fontSize: 16,
       },
@@ -183,6 +188,7 @@ const Text = (props) => {
       color: '#36424A',
       fontWeight: 300,
       whiteSpace: 'pre-line',
+      '& strong': { color: props.accentColor },
     },
     'p1.w': {
       fontSize: 16,
@@ -238,15 +244,16 @@ const Text = (props) => {
       : styles.p1;
   }
 
-  const GlamorTextGenerator = styled(propOrDefault)(styles[props.type]);
+  const TextGenerator = styled(propOrDefault)(styles[props.type]);
   return (
-    <GlamorTextGenerator style={props.style}>
+    <TextGenerator style={props.style}>
       {props.children}
-    </GlamorTextGenerator>
+    </TextGenerator>
   );
 };
 
 Text.propTypes = {
+  accentColor: PropTypes.string,
   type: PropTypes.string.isRequired,
 };
 

@@ -41,12 +41,15 @@ const View = styled.div(props => (
 
 View.propTypes = {
   type: PropTypes.string,
-  round: PropTypes.bool,
+  round: PropTypes.number,
   width: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
   ]),
-  height: PropTypes.number,
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   justify: PropTypes.string,
   align: PropTypes.string,
   direction: PropTypes.string,

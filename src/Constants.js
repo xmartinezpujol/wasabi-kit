@@ -5,10 +5,12 @@ const COLOR_PALETTE = {
   sashimi: '#FF4242',
   wasabi: '#D4EE5E',
   rice: '#F4FAD2',
-  lightwasabi: '#E1EDB9',
+  lightWasabi: '#E1EDB9',
   nori: '#424649',
   noriDark: '#2D2D2A',
   wasabiRad: '#35FF69',
+  greenTea: '#77B41B',
+  lightTea: '#D0F0C0',
   pink: '#FD1999',
 
   // Secondary
