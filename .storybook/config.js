@@ -6,6 +6,7 @@ import wasabi from "./wasabi";
 addParameters({
   options: {
     theme: wasabi,
+    addonPanelInRight: true,
   },
 });
 

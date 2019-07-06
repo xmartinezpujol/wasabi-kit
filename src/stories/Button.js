@@ -10,6 +10,7 @@ const optionsTemplate = {
   default: 'default',
   outlined: 'outlined',
   link: 'link',
+  dynamic: 'dynamic',
 };
 const optionsBorder = {
   night: 'night',

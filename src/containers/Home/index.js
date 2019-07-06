@@ -1,22 +1,30 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import theme from 'styled-theming';
 
-const boxBackgroundColor = theme('mode', {
-  light: '#fff',
-  dark: '#000',
-});
-
-const Box = styled.div`
-  background-color: ${boxBackgroundColor};
-`;
+import Button from '../../components/Button';
+import View from '../../components/View';
+import Text from '../../components/Text';
 
 const Home = () => (
-  <ThemeProvider theme={{ mode: 'light' }}>
-    <Box>
-      Hello World
-    </Box>
-  </ThemeProvider>
+  <View padding={40} height="100vh" type="wasabiRad">
+    <View
+      align="space-between"
+      justify="space-between"
+      height={300}
+      type="purewhite"
+      container
+      padding={50}
+      round={20}
+    >
+      <Text style={{ margin: 0 }} type="h1" >Wasabi Studio to the Rescue! 🦸</Text>
+      <Button
+        bold
+        uppercase
+        template="dynamic"
+      >
+        {'Lets do This!'}
+      </Button>
+    </View>
+  </View>
 );
 
 export default Home;

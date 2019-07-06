@@ -13,15 +13,15 @@ const shape = {
 const size = {
   small: {
     fontSize: 14,
-    minHeight: 30,
+    height: 30,
   },
   medium: {
     fontSize: 18,
-    minHeight: 54,
+    height: 54,
   },
   large: {
     fontSize: 22,
-    minHeight: 60,
+    height: 60,
   },
 };
 
@@ -31,6 +31,26 @@ const template = (props) => {
       background: COLOR_PALETTE[props.type],
       border: 0,
       color: COLOR_PALETTE.nori,
+    },
+    dynamic: {
+      color: COLOR_PALETTE.purewhite,
+      position: 'relative',
+      zIndex: 1,
+      border: 0,
+      background: `linear-gradient(to right, ${props.gradient[0]}, ${props.gradient[1]})`,
+      '&:after': {
+        content: "''",
+        bottom: '-10px',
+        left: '5%',
+        height: '100%',
+        width: '90%',
+        position: 'absolute',
+        background: 'inherit',
+        top: '0.5rem',
+        filter: 'blur(0.4rem)',
+        opacity: 0.7,
+        zIndex: -1,
+      },
     },
     outlined: {
       backgroundColor: COLOR_PALETTE.rice,
@@ -117,6 +137,12 @@ const ButtonBox = styled.button(
     ':active:enabled': {
       transform: props.noanim ? 'none' : 'translateY(1px)',
     },
+    ':hover': {
+      transform: props.noanim ? 'none' : 'translateY(-5px)',
+    },
+    ':hover:after': {
+      bottom: props.noanim ? 'inherit' : '-10px',
+    },
   }),
 );
 
@@ -152,12 +178,13 @@ Button.propTypes = {
   fullWidth: PropTypes.bool,
   noanim: PropTypes.bool,
   uppercase: PropTypes.bool,
+  gradient: PropTypes.arrayOf(PropTypes.string),
 };
 
 Button.defaultProps = {
   type: 'wasabi',
   template: 'default',
-  color: 'wasabi',
+  color: COLOR_PALETTE.nori,
   bordercolor: COLOR_PALETTE.night,
   bold: false,
   shape: 'default',
@@ -170,6 +197,7 @@ Button.defaultProps = {
   fullWidth: false,
   noanim: false,
   uppercase: false,
+  gradient: ['#0fd850', '#35FF69'],
 };
 
 export default Button;
