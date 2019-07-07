@@ -94,6 +94,7 @@ const template = (props) => {
 const Icon = styled.i(
   {
     display: 'inline-flex',
+    padding: '18px 3px',
   },
   props => ({
     fontSize: props.iconSize,
@@ -109,8 +110,8 @@ const ButtonBox = styled.button(
     cursor: 'pointer',
     display: 'inline-flex',
     alignItems: 'center',
+    padding: '10px 35px',
     transition: '0.25s cubic-bezier(0.17, 0.67, 0.52, 0.97)',
-    padding: '0 22px',
     WebkitTapHighlightColor: 'rgba(255, 255, 255, 0)',
     ':hover:enabled': {
       boxShadow: '0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08)',

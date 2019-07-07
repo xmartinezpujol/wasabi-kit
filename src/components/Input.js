@@ -59,6 +59,11 @@ const InputBox = styled.input(
   }),
 );
 
+const Icon = styled.i`
+  position: absolute;
+  right: 15px;
+`;
+
 const loadingAnimation = keyframes({
   '0%': { transform: 'rotate(0deg)', opacity: 0.5 },
   '50%': { opacity: 1 },
@@ -141,7 +146,7 @@ class Input extends React.Component {
             onClick={this.toggleType}
           />
         )}
-        {icon && !loading && <i className={icon} />}
+        {icon && !loading && <Icon className={icon} />}
         {loading && <LoadingIcon className="fa fa-repeat" />}
       </InputContainer>
     );

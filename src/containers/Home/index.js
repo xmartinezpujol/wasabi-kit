@@ -31,7 +31,6 @@ const Home = () => (
           style={{
             fontSize: 25,
             letterSpacing: 0.5,
-            padding: '10px 35px',
             alignSelf: 'flex-end',
           }}
         >

@@ -1,6 +1,7 @@
 {
   "name": "wasabi-ui",
   "version": "1.0.0",
+  "homepage":"https://xmartinezpujol.github.io/wasabi-ui",
   "private": false,
   "dependencies": {
     "@storybook/theming": "^5.1.9",
@@ -17,12 +18,13 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "predeploy": "webpack --config webpack.prod.js",
     "test": "jest --env=jsdom --coverage",
     "teste2e": "cypress open",
     "test:output": "jest --json --outputFile=.jest-test-results.json",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "transform": {
