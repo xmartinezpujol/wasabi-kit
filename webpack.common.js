@@ -3,8 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const paths = {
-  DIST: path.resolve(__dirname, 'dist'),
-  DEPLOY: path.resolve(__dirname, 'dist'),
+  DEPLOY: path.resolve(__dirname, 'build'),
   SRC: path.resolve(__dirname, 'src'),
 };
 
