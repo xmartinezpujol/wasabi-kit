@@ -13,5 +13,12 @@
     "prefer-promise-reject-errors": 0,
     "import/no-extraneous-dependencies": 0,
     "no-plusplus": 0,
+    "no-param-reassign": 0,
+    "no-confusing-arrow": 0,
+    "no-unneeded-ternary": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }

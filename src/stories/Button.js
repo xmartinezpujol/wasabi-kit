@@ -14,7 +14,6 @@ const optionsTemplate = {
 };
 const optionsBorder = {
   night: 'night',
-  consumer: 'consumer',
   business: 'business',
   positive: 'positive',
   temporary: 'temporary',

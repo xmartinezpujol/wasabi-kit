@@ -4,6 +4,7 @@ import '../App.css';
 import './Button';
 import './Icon';
 import './Input';
+import './Lists';
 import './Modal';
 import './Text';
 import './View';
