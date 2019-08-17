@@ -24,6 +24,8 @@
     "deploy": "gh-pages -d build"
   },
   "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "transform": {
       ".*": "./node_modules/babel-jest"
     },
