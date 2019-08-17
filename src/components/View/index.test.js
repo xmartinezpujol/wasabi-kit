@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import View from '../src/components/View';
+import View from '.';
 
 configure({ adapter: new Adapter() });
 

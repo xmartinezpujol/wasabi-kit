@@ -1,5 +1,6 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:cypress/recommended"],
+  "plugins": ["cypress"],
   "rules": {
     "func-names": ["error", "never"],
     "jsx-a11y/label-has-for": 0,
@@ -18,7 +19,9 @@
     "no-unneeded-ternary": 0
   },
   "env": {
+    "cypress/globals": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "jest": true
   }
 }

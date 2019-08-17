@@ -140,8 +140,6 @@ class Carousel extends React.Component {
         (window.innerWidth >= 1430
           ? 1430
           : this.containerRef.current.offsetWidth) / (cardWidth + 6)));
-      console.log(this.containerRef.current.offsetWidth, (cardWidth + 6));
-      console.log((this.containerRef.current.offsetWidth) / (cardWidth + 6));
     }
     const maxSlideMoves = Math.trunc((numCards / maxSlides)) - 1;
 

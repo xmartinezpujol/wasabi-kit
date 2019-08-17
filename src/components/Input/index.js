@@ -1,10 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import PropTypes from 'prop-types';
 
-import Button from './Button';
+import Button from '.';
 
-import COLOR_PALETTE from '../Constants';
+import COLOR_PALETTE from '../../Constants';
 
 const InputContainer = styled.div`
     position: relative;
@@ -152,16 +151,6 @@ class Input extends React.Component {
     );
   }
 }
-
-Input.propTypes = {
-  type: PropTypes.string,
-  borderColor: PropTypes.string,
-  borderFocus: PropTypes.string,
-  shape: PropTypes.string,
-  size: PropTypes.string,
-  loading: PropTypes.bool,
-  togglePassword: PropTypes.bool,
-};
 
 Input.defaultProps = {
   type: 'text',

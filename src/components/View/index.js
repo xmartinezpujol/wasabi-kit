@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-import COLOR_PALETTE from '../Constants';
+import COLOR_PALETTE from '../../Constants';
 
 const Container = {
   styles: {
@@ -38,23 +37,5 @@ const View = styled.div(props => (
     padding: props.padding,
   }
 ));
-
-View.propTypes = {
-  type: PropTypes.string,
-  round: PropTypes.number,
-  width: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
-  height: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
-  justify: PropTypes.string,
-  align: PropTypes.string,
-  direction: PropTypes.string,
-  container: PropTypes.bool,
-  padding: PropTypes.number,
-};
 
 export default View;

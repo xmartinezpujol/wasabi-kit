@@ -4,7 +4,7 @@ exports[`View View renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-1ysjyam",
+      "class": "View-sc-1vbsgqx-0 DFEwM",
     },
     "children": Array [
       Object {

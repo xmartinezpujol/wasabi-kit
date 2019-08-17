@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {
   Arrow,
@@ -16,6 +15,7 @@ class CarouselHero extends React.Component {
       numSlides: this.props.slides.length,
       curSlide: 0,
     };
+    this.heroRef = React.createRef();
     this.handleSlideMove = this.handleSlideMove.bind(this);
   }
 
@@ -29,7 +29,7 @@ class CarouselHero extends React.Component {
           }));
           // Scroll Component to Left 100% Window offset
           setTimeout(() => {
-            ReactDOM.findDOMNode(this).scrollLeft -= window.innerWidth;
+            this.heroRef.current.scrollLeft -= window.innerWidth;
           }, 100);
         } else {
           this.setState(() => ({
@@ -37,7 +37,7 @@ class CarouselHero extends React.Component {
           }));
           // Scroll Component to the end
           setTimeout(() => {
-            ReactDOM.findDOMNode(this).scrollLeft += window.innerWidth * (this.state.numSlides - 1);
+            this.heroRef.current.scrollLeft += window.innerWidth * (this.state.numSlides - 1);
           }, 100);
         }
         break;
@@ -48,7 +48,7 @@ class CarouselHero extends React.Component {
           }));
           // Scroll Component to Right 100% Window offset
           setTimeout(() => {
-            ReactDOM.findDOMNode(this).scrollLeft += window.innerWidth;
+            this.heroRef.current.scrollLeft += window.innerWidth;
           }, 100);
         } else {
           this.setState(() => ({
@@ -56,7 +56,7 @@ class CarouselHero extends React.Component {
           }));
           // Scroll Component back to Slide 0
           setTimeout(() => {
-            ReactDOM.findDOMNode(this).scrollLeft = 0;
+            this.heroRef.current.scrollLeft = 0;
           }, 100);
         }
         break;
@@ -70,7 +70,7 @@ class CarouselHero extends React.Component {
         className="hero-container"
         style={{ animation: 'fadeIn 3s' }}
         height={this.props.height}
-        ref={(heroContext) => { this.heroContext = heroContext; }}
+        ref={this.heroRef}
         id="hero-carousel"
       >
         <ArrowNavPrev className="nav-slide nav-prev">

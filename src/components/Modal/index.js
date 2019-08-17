@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const ModalBackdrop = styled.div({
   position: 'fixed',
@@ -130,12 +129,6 @@ class Modal extends React.Component {
     );
   }
 }
-
-Modal.propTypes = {
-  padding: PropTypes.number,
-  color: PropTypes.string,
-  windowed: PropTypes.bool,
-};
 
 Modal.defaultProps = {
   padding: 0,

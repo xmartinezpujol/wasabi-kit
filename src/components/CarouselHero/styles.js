@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { COLOR_PALETTE } from '../../Constants';
-
 const HeroImage = styled.img`
   object-fit: cover;
   min-width: 100vw;

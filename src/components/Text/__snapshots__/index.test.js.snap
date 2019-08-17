@@ -4,7 +4,7 @@ exports[`Text h1 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-14cjhng",
+      "class": "sc-bwzfXH iJgxGb",
     },
     "children": Array [
       Object {
@@ -57,7 +57,7 @@ exports[`Text h2 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-lysq4l",
+      "class": "sc-bxivhb hfzVEL",
     },
     "children": Array [
       Object {
@@ -110,7 +110,7 @@ exports[`Text h3 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-1ujrf7i",
+      "class": "sc-EHOje bNTDRu",
     },
     "children": Array [
       Object {
@@ -163,7 +163,7 @@ exports[`Text h4 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-1m0rikh",
+      "class": "sc-gzVnrw igImkg",
     },
     "children": Array [
       Object {
@@ -216,7 +216,7 @@ exports[`Text h5 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-ard4n3",
+      "class": "sc-dnqmqq lggCwp",
     },
     "children": Array [
       Object {
@@ -269,7 +269,7 @@ exports[`Text p1 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-3kq6q1",
+      "class": "sc-gZMcBi fbGhgM",
     },
     "children": Array [
       Object {
@@ -322,7 +322,7 @@ exports[`Text p2 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-1i2z69e",
+      "class": "sc-VigVT kruocd",
     },
     "children": Array [
       Object {
@@ -375,7 +375,7 @@ exports[`Text p3 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-1dad5y5",
+      "class": "sc-fjdhpX ccKGKF",
     },
     "children": Array [
       Object {
@@ -428,7 +428,7 @@ exports[`Text p4 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-zwpz78",
+      "class": "sc-cSHVUG huFrkT",
     },
     "children": Array [
       Object {
@@ -481,7 +481,7 @@ exports[`Text p5 renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-16gau2z",
+      "class": "sc-chPdSV fbfVEO",
     },
     "children": Array [
       Object {
@@ -534,7 +534,7 @@ exports[`Text span renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-qg0hta",
+      "class": "sc-kGXeez gcXCgA",
     },
     "children": Array [
       Object {

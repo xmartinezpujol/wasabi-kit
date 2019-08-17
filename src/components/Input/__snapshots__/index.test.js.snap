@@ -4,12 +4,13 @@ exports[`Input renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "css-yj117s",
+      "class": "Input__InputContainer-sc-14y2to-0 cABmum",
     },
     "children": Array [
       Object {
         "attribs": Object {
-          "class": "css-1euaqi2",
+          "class": "Input__InputBox-sc-14y2to-1 hLgdZV",
+          "shape": "default",
           "type": "text",
         },
         "children": Array [],
@@ -21,10 +22,12 @@ initialize {
         "type": "tag",
         "x-attribsNamespace": Object {
           "class": undefined,
+          "shape": undefined,
           "type": undefined,
         },
         "x-attribsPrefix": Object {
           "class": undefined,
+          "shape": undefined,
           "type": undefined,
         },
       },

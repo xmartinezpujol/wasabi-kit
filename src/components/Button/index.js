@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-import COLOR_PALETTE from '../Constants';
+import COLOR_PALETTE from '../../Constants';
 
 const shape = {
   round: '200px',
@@ -70,7 +69,7 @@ const template = (props) => {
       border: 0,
       color: props.bordercolor
         ? COLOR_PALETTE[props.bordercolor]
-        : COLOR_PALETTE.night,
+        : COLOR_PALETTE.nori,
       ':hover:enabled': {
         boxShadow: 'none',
         color: props.bordercolor
@@ -91,17 +90,15 @@ const template = (props) => {
   return templateMod;
 };
 
-const Icon = styled.i(
-  {
-    display: 'inline-flex',
-    padding: '18px 3px',
-  },
-  props => ({
+const Icon = styled.i`
+  display: inline-flex;
+  padding: 18px 3px;
+  ${props => ({
     fontSize: props.iconSize,
-    width: props.iconWidth,
     fontWeight: props.iconWeight,
-  }),
-);
+    width: props.iconWidth,
+  })}
+`;
 
 const ButtonBox = styled.button(
   {
@@ -145,7 +142,7 @@ const ButtonBox = styled.button(
 );
 
 const Button = props => (
-  <ButtonBox {...props}>
+  <ButtonBox data-cy="button" {...props}>
     {props.icon !== ''
     && (
       <Icon
@@ -159,25 +156,6 @@ const Button = props => (
     {props.children}
   </ButtonBox>
 );
-
-Button.propTypes = {
-  type: PropTypes.string,
-  template: PropTypes.string,
-  color: PropTypes.string,
-  bordercolor: PropTypes.string,
-  bold: PropTypes.bool,
-  shape: PropTypes.string,
-  size: PropTypes.string,
-  icon: PropTypes.string,
-  iconSize: PropTypes.number,
-  iconWeight: PropTypes.number,
-  iconWidth: PropTypes.number,
-  iFont: PropTypes.string,
-  fullWidth: PropTypes.bool,
-  noanim: PropTypes.bool,
-  uppercase: PropTypes.bool,
-  gradient: PropTypes.arrayOf(PropTypes.string),
-};
 
 Button.defaultProps = {
   type: 'wasabi',
