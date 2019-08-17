@@ -6,16 +6,14 @@ import Button from '.';
 import COLOR_PALETTE from '../../Constants';
 
 const InputContainer = styled.div`
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    '> i': {
-      position: absolute;
-      right: 25;
-    }
-  }, props => ({
-    minWidth: props.mWidth ? props.mWidth : 'auto',
-  }),
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  minWidth: ${props => props.mWidth ? props.mWidth : 'auto'};
+  > i: {
+    position: absolute;
+    right: 25;
+  }
 `;
 
 const shapeStyle = {
@@ -63,11 +61,11 @@ const Icon = styled.i`
   right: 15px;
 `;
 
-const loadingAnimation = keyframes({
-  '0%': { transform: 'rotate(0deg)', opacity: 0.5 },
-  '50%': { opacity: 1 },
-  '100%': { transform: 'rotate(360deg)', opacity: 0.5 },
-});
+const loadingAnimation = keyframes`
+  0%: { transform: rotate(0deg); opacity: 0.5; }
+  50%: { opacity: 1; }
+  100%: { transform: rotate(360deg); opacity: 0.5; }
+`;
 
 const LoadingIcon = styled.i`
   position: absolute;
