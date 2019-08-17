@@ -4,7 +4,7 @@ exports[`Input renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "Input__InputContainer-sc-14y2to-0 cABmum",
+      "class": "Input__InputContainer-sc-14y2to-0 sJSte",
     },
     "children": Array [
       Object {

@@ -113,14 +113,11 @@ class Input extends React.Component {
     return (
       <InputContainer style={outerStyle} togglePassword={togglePassword}>
         <InputBox
-          {...this.props}
-          {...typeof input !== 'undefined' ? input : null}
           placeholder={placeholder}
           required={required}
           borderColor={borderColor}
           borderFocus={borderFocus}
           shape={shape}
-          loading={loading}
           type={type === 'password' && togglePassword ? togglePasswordStatus : type}
           min={min}
           max={max}
