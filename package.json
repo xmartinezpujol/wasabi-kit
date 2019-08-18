@@ -20,7 +20,7 @@
     "teste2e": "cypress open",
     "test:output": "jest --json --outputFile=.jest-test-results.json",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
