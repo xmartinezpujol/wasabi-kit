@@ -11,7 +11,8 @@
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "styled-components": "^4.3.0",
-    "styled-theming": "^2.2.0"
+    "styled-theming": "^2.2.0",
+    "snyk": "^1.217.0"
   },
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
@@ -20,7 +21,9 @@
     "teste2e": "cypress open",
     "test:output": "jest --json --outputFile=.jest-test-results.json",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -76,5 +79,6 @@
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.5.1",
     "webpack-merge": "^4.2.1"
-  }
+  },
+  "snyk": true
 }
