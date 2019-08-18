@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 
 import Button from '.';
 
-import COLOR_PALETTE from '../../Constants';
+import COLOR_PALETTE from '../Constants';
 
 const InputContainer = styled.div`
   position: relative;

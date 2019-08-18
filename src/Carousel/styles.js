@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-import COLOR_PALETTE from '../../Constants';
+import COLOR_PALETTE from '../Constants';
 
 const fadeIn = keyframes`
   0%: { opacity: 0; }

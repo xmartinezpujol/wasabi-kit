@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 import Button from '.';
-import COLOR_PALETTE from '../../Constants';
+import COLOR_PALETTE from '../Constants';
 
 describe('Button', () => {
   it('should render a Button with no icon', () => {

@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-import COLOR_PALETTE from '../../Constants';
+import COLOR_PALETTE from '../Constants';
 
 const spin = keyframes`
   from { transform: rotate(0deg); }

@@ -4,12 +4,12 @@ exports[`Input renders correctly 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "Input__InputContainer-sc-14y2to-0 sJSte",
+      "class": "Input__InputContainer-sc-1wsvxu4-0 bXGHHY",
     },
     "children": Array [
       Object {
         "attribs": Object {
-          "class": "Input__InputBox-sc-14y2to-1 hLgdZV",
+          "class": "Input__InputBox-sc-1wsvxu4-1 hIbfFp",
           "shape": "default",
           "type": "text",
         },

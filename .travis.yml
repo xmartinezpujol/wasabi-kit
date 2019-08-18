@@ -17,3 +17,14 @@ install:
 
 script:
   - npm run test && codecov
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm run test
+        - npm run codecov
+    - stage: deploy
+      if: branch = master
+      before_script: npm run build
+      script: npm run semantic-release
