@@ -15,15 +15,12 @@ install:
   - npm install -g codecov
   - npm ci
 
-script:
-  - npm run test && codecov
-
 jobs:
   include:
     - stage: test
       script:
         - npm run test
-        - npm run codecov
+        - codecov
     - stage: deploy
       if: branch = master
       before_script: npm run build
