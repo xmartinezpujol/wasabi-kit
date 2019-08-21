@@ -44,7 +44,7 @@ const template = (props) => {
         background: 'inherit',
         top: '0.5rem',
         filter: 'blur(0.4rem)',
-        opacity: 0.7,
+        opacity: 0.65,
         zIndex: -1,
       },
     },
