@@ -32,5 +32,5 @@ export default create({
   inputTextColor: COLOR_PALETTE.nori,
   inputBorderRadius: 4,
 
-  brandTitle: "WASABI UI",
+  brandTitle: "WASABI KIT",
 });
