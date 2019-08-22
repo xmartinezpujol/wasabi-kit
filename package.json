@@ -16,12 +16,12 @@
     "url": "https://github.com/xmartinezpujol/wasabi-kit/issues"
   },
   "homepage": "https://wasabikit.netlify.com",
-  "main": "build/index.cjs.js",
-  "module": "build/index.esm.js",
-  "browser": "build/index.js",
-  "style": "build/index.css",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "browser": "lib/index.js",
+  "style": "lib/index.css",
   "files": [
-    "build/*"
+    "lib/*"
   ],
   "private": false,
   "dependencies": {
