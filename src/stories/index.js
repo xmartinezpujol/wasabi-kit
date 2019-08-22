@@ -2,6 +2,7 @@ import '../App.css';
 
 // Stories
 import './Button';
+import './Card';
 import './Icon';
 import './Input';
 import './Lists';

@@ -2,8 +2,8 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import Text from '../components/Text';
-import View from '../components/View';
+import Text from '../Text';
+import View from '../View';
 
 storiesOf('Texts', module)
   .add('local', () => (

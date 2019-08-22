@@ -67,6 +67,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
+    "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/addon-notes": "^5.1.9",
     "@storybook/addon-viewport": "^5.1.9",

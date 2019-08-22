@@ -3,8 +3,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, select, number } from '@storybook/addon-knobs';
 
-import Icon from '../components/Icon';
-import View from '../components/View';
+import Icon from '../Icon';
+import View from '../View';
 
 const optionsColor = {
   black: 'black',

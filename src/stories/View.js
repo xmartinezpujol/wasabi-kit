@@ -8,7 +8,7 @@ import {
   select,
 } from '@storybook/addon-knobs';
 
-import View from '../components/View';
+import View from '../View';
 
 const optionsView = {
   transparent: 'transparent',

@@ -6,9 +6,9 @@ import { withKnobs, boolean, number, object } from '@storybook/addon-knobs';
 import { Events } from './../mocks/Events';
 import { HeroSlides } from './../mocks/HeroSlides';
 
-import View from '../components/View';
-import Carousel from '../components/Carousel';
-import CarouselHero from '../components/CarouselHero';
+import View from '../View';
+import Carousel from '../Carousel';
+import CarouselHero from '../CarouselHero';
 
 storiesOf('Carousel', module)
   .addDecorator(withKnobs)

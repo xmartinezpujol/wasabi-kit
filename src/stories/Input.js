@@ -2,8 +2,8 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
-import Input from '../components/Input';
-import View from '../components/View';
+import Input from '../Input';
+import View from '../View';
 
 const optionsShape = {
   round: 'round',

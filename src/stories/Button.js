@@ -3,8 +3,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean, select, number } from '@storybook/addon-knobs';
 
-import Button from '../components/Button';
-import View from '../components/View';
+import Button from '../Button';
+import View from '../View';
 
 const optionsTemplate = {
   default: 'default',
