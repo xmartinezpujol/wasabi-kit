@@ -9,7 +9,7 @@ const InputContainer = styled.div`
   position: relative;
   display: inline-flex;
   align-items: center;
-  minWidth: ${props => props.mWidth ? props.mWidth : 'auto'};
+  minwidth: ${props => (props.mWidth ? props.mWidth : 'auto')};
   > i: {
     position: absolute;
     right: 25;
@@ -19,14 +19,14 @@ const InputContainer = styled.div`
 const shapeStyle = {
   round: '200px',
   square: 0,
-  default: 6,
+  default: 6
 };
 
 const InputBox = styled.input(
   {
     fontFamily: 'Poppins, sans-serif',
     flex: '1 0 auto',
-    border: '2px solid #F4F4F4',
+    border: '3px solid #F4F4F4',
     height: 50,
     fontSize: 16,
     margin: 0,
@@ -36,24 +36,24 @@ const InputBox = styled.input(
     color: '#000',
     transition: 'all 1s',
     ':hover': {
-      opacity: 0.8,
+      opacity: 0.8
     },
     ':focus': {
       outline: 0,
-      borderColor: '#6E7A83',
+      borderColor: '#6E7A83'
     },
     ':disabled': {
       opacity: 0.3,
-      cursor: 'not-allowed',
-    },
+      cursor: 'not-allowed'
+    }
   },
   props => ({
     borderColor: COLOR_PALETTE[props.borderColor],
     borderRadius: props.shape ? shapeStyle[props.shape] : shapeStyle.default,
     ':focus': {
-      borderColor: COLOR_PALETTE[props.borderFocus],
-    },
-  }),
+      borderColor: COLOR_PALETTE[props.borderFocus]
+    }
+  })
 );
 
 const Icon = styled.i`
@@ -62,9 +62,9 @@ const Icon = styled.i`
 `;
 
 const loadingAnimation = keyframes`
-  0%: { transform: rotate(0deg); opacity: 0.5; }
-  50%: { opacity: 1; }
-  100%: { transform: rotate(360deg); opacity: 0.5; }
+  0% { transform: rotate(0deg); opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { transform: rotate(360deg); opacity: 0.5; }
 `;
 
 const LoadingIcon = styled.i`
@@ -80,16 +80,14 @@ class Input extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      togglePasswordStatus: this.props.type,
+      togglePasswordStatus: this.props.type
     };
     this.toggleType = this.toggleType.bind(this);
   }
 
   toggleType() {
     this.setState(prevState => ({
-      togglePasswordStatus: prevState.togglePasswordStatus === 'password'
-        ? 'text'
-        : 'password',
+      togglePasswordStatus: prevState.togglePasswordStatus === 'password' ? 'text' : 'password'
     }));
   }
 
@@ -97,7 +95,7 @@ class Input extends React.Component {
     const {
       outerStyle,
       togglePassword,
-      input,
+      disabled,
       placeholder,
       required,
       borderColor,
@@ -107,12 +105,13 @@ class Input extends React.Component {
       type,
       icon,
       min,
-      max,
+      max
     } = this.props;
     const { togglePasswordStatus } = this.state;
     return (
       <InputContainer style={outerStyle} togglePassword={togglePassword}>
         <InputBox
+          disabled={disabled}
           placeholder={placeholder}
           required={required}
           borderColor={borderColor}
@@ -131,7 +130,7 @@ class Input extends React.Component {
             style={{
               padding: '0px 15px',
               position: 'absolute',
-              right: 0,
+              right: 0
             }}
             border
             shape="round"
@@ -154,7 +153,7 @@ Input.defaultProps = {
   shape: 'default',
   size: 'medium',
   loading: false,
-  togglePassword: false,
+  togglePassword: false
 };
 
 export default Input;

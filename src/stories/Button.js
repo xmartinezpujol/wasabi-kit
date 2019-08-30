@@ -10,19 +10,19 @@ const optionsTemplate = {
   default: 'default',
   outlined: 'outlined',
   link: 'link',
-  dynamic: 'dynamic',
+  dynamic: 'dynamic'
 };
 const optionsBorder = {
   night: 'night',
-  business: 'business',
+  sashimi: 'sashimi',
   positive: 'positive',
   temporary: 'temporary',
-  negative: 'negative',
+  negative: 'negative'
 };
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)
-  .add('default', (() => {
+  .add('default', () => {
     const defaultTeamplate = 'default';
     const defaultborderColor = 'black';
 
@@ -54,7 +54,7 @@ storiesOf('Button', module)
         </Button>
       </View>
     );
-  }))
+  })
   .add('with icon', () => {
     const defaultTeamplate = 'default';
     const defaultborderColor = 'black';
@@ -111,10 +111,10 @@ storiesOf('Button', module)
         direction="column"
       >
         <Button
+          padding={text('Padding', '0')}
           iFont={text('Icon Font', 'fa')}
           icon={text('Icon name (FA)', 'comment')}
           iconSize={number('Icon fontSize', 20)}
-          style={{ padding: '0px 17px' }}
           border={boolean('Border', true)}
           shape="round"
           color={borderColor}
