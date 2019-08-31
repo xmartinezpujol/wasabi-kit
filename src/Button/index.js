@@ -26,7 +26,7 @@ const template = props => {
     default: {
       background: COLOR_PALETTE[props.type],
       border: 0,
-      color: COLOR_PALETTE.nori
+      color: COLOR_PALETTE[props.color]
     },
     dynamic: {
       color: COLOR_PALETTE.purewhite,
@@ -49,32 +49,29 @@ const template = props => {
       }
     },
     outlined: {
-      backgroundColor: COLOR_PALETTE.rice,
+      background: COLOR_PALETTE[props.type],
       border: '2px solid',
-      borderColor: COLOR_PALETTE[props.bordercolor],
-      color: props.bordercolor ? COLOR_PALETTE[props.bordercolor] : COLOR_PALETTE.night,
+      borderColor: COLOR_PALETTE[props.color],
+      color: COLOR_PALETTE[props.color],
       ':hover:enabled': {
-        background:
-          props.bordercolor === COLOR_PALETTE.nori || !props.bordercolor
-            ? COLOR_PALETTE.night
-            : COLOR_PALETTE.rice,
-        color:
-          props.bordercolor === COLOR_PALETTE.nori || !props.bordercolor
-            ? COLOR_PALETTE.rice
-            : props.bordercolor
+        background: COLOR_PALETTE[props.color],
+        color: COLOR_PALETTE[props.type]
       }
     },
     link: {
-      backgroundColor: COLOR_PALETTE[props.type],
+      backgroundColor: props.type ? COLOR_PALETTE[props.type] : COLOR_PALETTE.transparent,
       border: 0,
-      color: props.bordercolor ? COLOR_PALETTE[props.bordercolor] : COLOR_PALETTE.nori,
+      color: COLOR_PALETTE[props.color],
       ':hover:enabled': {
         boxShadow: 'none',
-        color: props.bordercolor
-          ? props.bordercolor === COLOR_PALETTE.nori
-            ? COLOR_PALETTE.rice
-            : props.bordercolor
-          : COLOR_PALETTE.nori
+        backgroundColor:
+          props.type === COLOR_PALETTE.transparent
+            ? COLOR_PALETTE.transparent
+            : COLOR_PALETTE[props.color],
+        color:
+          props.type !== COLOR_PALETTE.transparent
+            ? COLOR_PALETTE[props.type]
+            : COLOR_PALETTE[props.color]
       }
     }
   };
@@ -84,16 +81,6 @@ const template = props => {
 
   return templateMod;
 };
-
-const Icon = styled.i`
-  display: inline-flex;
-  padding: 0;
-  ${props => ({
-    fontSize: props.iconSize,
-    fontWeight: props.iconWeight,
-    width: props.iconWidth
-  })};
-`;
 
 const ButtonBox = styled.button(
   {
@@ -140,15 +127,6 @@ const ButtonBox = styled.button(
 
 const Button = props => (
   <ButtonBox data-cy="button" {...props}>
-    {props.icon !== '' && (
-      <Icon
-        iconWeight={props.iconWeight}
-        iconSize={props.iconSize}
-        iconWidth={props.iconWidth}
-        className={`${props.iFont} ${props.iFont}-${props.icon}`}
-        aria-hidden="true"
-      />
-    )}
     {props.children}
   </ButtonBox>
 );
@@ -157,15 +135,9 @@ Button.defaultProps = {
   type: 'wasabi',
   template: 'default',
   color: COLOR_PALETTE.nori,
-  bordercolor: COLOR_PALETTE.night,
   bold: false,
   shape: 'default',
   size: 'medium',
-  icon: '',
-  iconSize: 22,
-  iconWeight: 300,
-  iconWidth: 'auto',
-  iFont: 'fa',
   minHeight: '50px',
   minWidth: '50px',
   noanim: false,

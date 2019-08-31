@@ -1,13 +1,13 @@
 import { configure } from '@storybook/react';
 import { addParameters } from '@storybook/react';
-import wasabi from "./wasabi";
+import wasabi from './wasabi';
 
 // Option defaults.
 addParameters({
   options: {
     theme: wasabi,
-    addonPanelInRight: true,
-  },
+    addonPanelInRight: true
+  }
 });
 
 function loadStories() {
