@@ -46,6 +46,8 @@ storiesOf('Button', module)
         direction="column"
       >
         <Button
+          margin={text('Margin', '0')}
+          padding={text('Padding', '10px 35px')}
           color={color}
           type={background}
           bold={boolean('Bold', true)}
@@ -84,6 +86,7 @@ storiesOf('Button', module)
         direction="column"
       >
         <Button
+          margin={text('Margin', '0')}
           padding={text('Padding', '0')}
           color={color}
           type={background}
@@ -131,6 +134,7 @@ storiesOf('Button', module)
         direction="column"
       >
         <Button
+          margin={text('Margin', '0')}
           padding={text('Padding', '0')}
           shape="round"
           color={borderColor}

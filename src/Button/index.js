@@ -85,7 +85,6 @@ const template = props => {
 const ButtonBox = styled.button(
   {
     fontFamily: 'Poppins, sans-serif',
-    margin: '0 10px',
     cursor: 'pointer',
     display: 'inline-flex',
     alignItems: 'center',
@@ -121,6 +120,9 @@ const ButtonBox = styled.button(
     },
     ':hover:after': {
       bottom: props.noanim ? 'inherit' : '-10px'
+    },
+    ':not(:last-child)': {
+      margin: props.margin
     }
   })
 );
@@ -143,7 +145,8 @@ Button.defaultProps = {
   noanim: false,
   uppercase: false,
   gradient: ['#0fd850', '#35FF69'],
-  padding: '10px 35px'
+  padding: '10px 35px',
+  margin: '0 10px 0 0'
 };
 
 export default Button;

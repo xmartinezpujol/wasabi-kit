@@ -3,11 +3,13 @@ import styled from 'styled-components';
 
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean, object } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, object, number } from '@storybook/addon-knobs';
 
+import Button from '../Button';
 import Text from '../Text';
 import Card from '../Card';
 import View from '../View';
+import Icon from '../Icon';
 
 const dimensions = object('Dimensions', {
   xs: { w: 310, h: 240 },
@@ -66,6 +68,13 @@ storiesOf('Cards', module)
             'Curry (/ˈkʌri/, sometimes /ˈkɜːri/, plural curries) is an umbrella term referring to a number of dishes originating in the cuisine of the Indian subcontinent. .'
           )}
         </Text>
+        <View justify="flex-end">
+          <Button type="wasabi">Action1</Button>
+          <Button type="wasabi">Action2</Button>
+          <Button type="wasabi">
+            <Icon font="fa" name="heart" size={22} color="sashimi" />
+          </Button>
+        </View>
       </Card>
     </View>
   ))

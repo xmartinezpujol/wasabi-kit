@@ -1,12 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import {
-  withKnobs,
-  text,
-  number,
-  select,
-} from '@storybook/addon-knobs';
+import { withKnobs, text, number, select } from '@storybook/addon-knobs';
 
 import View from '../View';
 
@@ -21,16 +16,17 @@ const optionsView = {
   background_text: 'background_text',
   text: 'text',
   text2: 'text2',
-  title: 'title',
+  title: 'title'
 };
 
-storiesOf('View', module).addDecorator(withKnobs)
-  .add('colors', (() => {
+storiesOf('View', module)
+  .addDecorator(withKnobs)
+  .add('colors', () => {
     const label = 'Color';
     const defaultValue = 'consumer';
     const value = select(label, optionsView, defaultValue);
     return (
-      <View type="purewhite" container direction="column" >
+      <View type="purewhite" container direction="column">
         <div style={{ marginLeft: 20, marginBottom: 50 }}>
           <h1>Test View</h1>
           <View
@@ -39,7 +35,7 @@ storiesOf('View', module).addDecorator(withKnobs)
             align="center"
             round={number('Round', 20)}
             width={text('Width', '100%')}
-            height={text('Height', '200')}
+            height={text('Height', '200px')}
             type={value}
             padding={number('Padding', 20)}
           >
@@ -54,47 +50,96 @@ storiesOf('View', module).addDecorator(withKnobs)
             display: 'flex',
             flexFlow: 'wrap row',
             justifyContent: 'center',
-            marginBottom: 50,
+            marginBottom: 50
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <View direction="column" justify="center" align="center" type="red" height="200" width="200">
+            <View
+              direction="column"
+              justify="center"
+              align="center"
+              type="red"
+              height="200"
+              width="200"
+            >
               <p>#F83E59</p>
               <p>RED</p>
             </View>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <View direction="column" justify="center" align="center" type="red_light" height="200" width="200">
+            <View
+              direction="column"
+              justify="center"
+              align="center"
+              type="red_light"
+              height="200"
+              width="200"
+            >
               <p>#FD5E74</p>
               <p>RED LIGHT</p>
             </View>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <View direction="column" justify="center" align="center" type="blue" height="200" width="200">
+            <View
+              direction="column"
+              justify="center"
+              align="center"
+              type="blue"
+              height="200"
+              width="200"
+            >
               <p>#11CFDA</p>
               <p>BLUE</p>
             </View>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <View direction="column" justify="center" align="center" type="blue_light" height="200" width="200">
+            <View
+              direction="column"
+              justify="center"
+              align="center"
+              type="blue_light"
+              height="200"
+              width="200"
+            >
               <p>#71D6E2</p>
               <p>BLUE LIGHT</p>
             </View>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <View direction="column" justify="center" align="center" type="title" height="200" width="200">
+            <View
+              direction="column"
+              justify="center"
+              align="center"
+              type="title"
+              height="200"
+              width="200"
+            >
               <p>#36424A</p>
               <p>TITLE</p>
             </View>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <View direction="column" justify="center" align="center" type="text" height="200" width="200">
+            <View
+              direction="column"
+              justify="center"
+              align="center"
+              type="text"
+              height="200"
+              width="200"
+            >
               <p>#6E7A83</p>
               <p>TEXT</p>
             </View>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <View direction="column" justify="center" align="center" type="text2" height="200" width="200">
+            <View
+              direction="column"
+              justify="center"
+              align="center"
+              type="text2"
+              height="200"
+              width="200"
+            >
               <p>#B6BABD</p>
               <p>TEXT2</p>
             </View>
@@ -108,7 +153,7 @@ storiesOf('View', module).addDecorator(withKnobs)
             display: 'flex',
             flexFlow: 'wrap row',
             justifyContent: 'center',
-            marginBottom: 50,
+            marginBottom: 50
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -132,7 +177,7 @@ storiesOf('View', module).addDecorator(withKnobs)
             display: 'flex',
             flexFlow: 'wrap row',
             justifyContent: 'center',
-            marginBottom: 50,
+            marginBottom: 50
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -158,4 +203,4 @@ storiesOf('View', module).addDecorator(withKnobs)
         </div>
       </View>
     );
-  }));
+  });
