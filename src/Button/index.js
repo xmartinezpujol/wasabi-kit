@@ -136,7 +136,7 @@ const Button = props => (
 Button.defaultProps = {
   type: 'wasabi',
   template: 'default',
-  color: COLOR_PALETTE.nori,
+  color: 'nori',
   bold: false,
   shape: 'default',
   size: 'medium',

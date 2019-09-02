@@ -1,20 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button should render a Button with icon 1`] = `
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 18px 3px;
-  font-size: 20px;
-  font-weight: 300;
-  width: 10px;
-}
-
 .c0 {
   font-family: Poppins,sans-serif;
-  margin: 0 10px;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -24,7 +12,10 @@ exports[`Button should render a Button with icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 10px 35px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: 0.25s cubic-bezier(0.17,0.67,0.52,0.97);
   transition: 0.25s cubic-bezier(0.17,0.67,0.52,0.97);
   -webkit-tap-highlight-color: rgba(255,255,255,0);
@@ -34,7 +25,9 @@ exports[`Button should render a Button with icon 1`] = `
   font-size: 18px;
   border-radius: 6px;
   font-weight: 500;
-  min-width: initial;
+  padding: 10px 35px;
+  min-height: 50px;
+  min-width: 50px;
   text-transform: initial;
   -webkit-transform: translateY(-1px);
   -ms-transform: translateY(-1px);
@@ -70,25 +63,23 @@ exports[`Button should render a Button with icon 1`] = `
   bottom: -10px;
 }
 
+.c0:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
 <button
   className="c0"
-  color="#424649"
+  color="nori"
   data-cy="button"
   shape="default"
   size="medium"
   type="wasabi"
->
-  <i
-    aria-hidden="true"
-    className="fa fa-bomb c1"
-  />
-</button>
+/>
 `;
 
 exports[`Button should render a Button with no icon 1`] = `
 .c0 {
   font-family: Poppins,sans-serif;
-  margin: 0 10px;
   cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -98,7 +89,10 @@ exports[`Button should render a Button with no icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 10px 35px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: 0.25s cubic-bezier(0.17,0.67,0.52,0.97);
   transition: 0.25s cubic-bezier(0.17,0.67,0.52,0.97);
   -webkit-tap-highlight-color: rgba(255,255,255,0);
@@ -108,7 +102,9 @@ exports[`Button should render a Button with no icon 1`] = `
   font-size: 18px;
   border-radius: 6px;
   font-weight: 500;
-  min-width: initial;
+  padding: 10px 35px;
+  min-height: 50px;
+  min-width: 50px;
   text-transform: initial;
   -webkit-transform: translateY(-1px);
   -ms-transform: translateY(-1px);
@@ -144,9 +140,13 @@ exports[`Button should render a Button with no icon 1`] = `
   bottom: -10px;
 }
 
+.c0:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
 <button
   className="c0"
-  color="#424649"
+  color="nori"
   data-cy="button"
   shape="default"
   size="medium"
