@@ -10,3 +10,12 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 UI kit for Wasabi Studio
+
+### Semantic Release | Versioning
+
+* Commits with tag 'Docs', that contains 'README' in their header message will be associated with a patch release.
+* Commits with tag 'New' will be associated with a patch release.
+* Commits with tag 'Breaking' will be associated with a major release (per default release rules).
+* Commits with tag 'Fix' will be associated with a patch release (per default release rules).
+* Commits with tag 'Update' will be associated with a minor release (per default release rules).
+* All other commits will not be associated with a release type.
