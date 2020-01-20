@@ -95,31 +95,16 @@ class Input extends React.Component {
     const {
       outerStyle,
       togglePassword,
-      disabled,
-      placeholder,
-      required,
-      borderColor,
-      borderFocus,
-      shape,
       loading,
       type,
       icon,
-      min,
-      max
     } = this.props;
     const { togglePasswordStatus } = this.state;
     return (
       <InputContainer style={outerStyle} togglePassword={togglePassword}>
         <InputBox
-          disabled={disabled}
-          placeholder={placeholder}
-          required={required}
-          borderColor={borderColor}
-          borderFocus={borderFocus}
-          shape={shape}
+          {...this.props}
           type={type === 'password' && togglePassword ? togglePasswordStatus : type}
-          min={min}
-          max={max}
         />
         {togglePassword && type === 'password' && !loading && !icon && (
           <Button

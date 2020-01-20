@@ -25,6 +25,7 @@
   ],
   "private": false,
   "dependencies": {
+    "cross-env": "^6.0.3",
     "styled-components": "^4.4.0",
     "styled-theming": "^2.2.0"
   },
@@ -35,8 +36,8 @@
     "react-router-dom": "^5.0.0"
   },
   "scripts": {
-    "start": "NODE_ENV=development rollup -c -w",
-    "build": "NODE_ENV=production rollup -c",
+    "start": "cross-env NODE_ENV=development rollup -c -w",
+    "build": "cross-env NODE_ENV=production rollup -c",
     "test": "jest --env=jsdom --coverage",
     "teste2e": "cypress open",
     "test:output": "jest --json --outputFile=.jest-test-results.json",
